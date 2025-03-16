@@ -1,0 +1,57 @@
+.comparadores {
+    background-color: rgb(28, 28, 28);
+    color: white;
+    font-size: 20px;
+    text-align: center;
+    padding: 1px;
+    margin-top: 5px;
+}
+
+.rojo {
+    color: rgb(167, 24, 36);
+    p {
+        color: rgb(0, 0, 255);
+    }
+}
+
+.calculator {
+    background-color: rgb(28, 28, 28);
+    color: white;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.calculator input,
+.calculator select,
+.calculator button {
+    margin: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+}
+
+.calculator button {
+    background-color: rgb(175, 109, 60);
+    color: white;
+    cursor: pointer;
+}
+
+.calculator button:hover {
+    background-color: rgb(150, 90, 50);
+}
+
+input:invalid {
+    border: 2px solid red;
+}
+
+input:valid {
+    border: 2px solid rgb(178, 250, 178);
+}
+
+.calculator button:disabled {
+    background-color: grey;
+    cursor: not-allowed;
+    opacity: 0.6;
+}

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Carlos Guerra</title>
+    <link rel="stylesheet" href="style1calc.css" />
+    <link rel="stylesheet" href="../style1.css" />
+    <h1 id="tituloarriba">Sprint Uno |Nivel Básico|</h1>
+  </head>
+  <img src="../img/fondo1.jpg" class="fondo" />
+  <body>
+    <nav class="menu">
+      <div class="menu_container">
+        <figure class="menu_figure">
+          <img
+            src="../img/cmlogosmall.png"
+            width="40%"
+            class="menu_logo"
+            alt="Aprendiendo a programar"
+          />
+        </figure>
+
+        <label class="menu_toggle">
+          <input type="checkbox" id="menu-input" class="menu_input" />
+        </label>
+
+        <ul class="menu_list">
+          <li class="menu_item">
+            <a href="../Index.html" class="menu_link">Home</a>
+
+          </li>
+
+          <li class="menu_item dropdown">
+            <a href="#" class="menu_link">Deliverables</a>
+            <ul class="dropdown_menu">
+              <li><a href="#" class="dropdown_link">Calculadora</a></li>
+              <li><a href="#" class="dropdown_link">Option 2</a></li>
+              <li><a href="#" class="dropdown_link">Option 3</a></li>
+            </ul>
+          </li>
+
+          <li class="menu_item">
+            <a href="#" class="menu_link">Documents</a>
+          </li>
+          <li class="menu_item">
+            <a href="#" class="menu_link">About me</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <div class="calculator">
+      <h2>Calculadora</h2>
+      <form id="calcForm">
+        <label for="num1">Número 1:</label>
+        <input type="number" id="num1" required />
+        <br />
+        <label for="num2">Número 2:</label>
+        <input type="number" id="num2" required />
+        <br />
+        <label for="operation">Operación:</label>
+        <select id="operation">
+          <option value="add">Sumar</option>
+          <option value="subtract">Restar</option>
+          <option value="multiply">Multiplicar</option>
+          <option value="divide">Dividir</option>
+        </select>
+        <br />
+        <button type="submit" id="calcButton" disabled>Calcular</button>
+      </form>
+      <label id="result">Resultado: </label>
+    </div>
+    <script src="script1calc.js"></script>
+  </body>
+</html>

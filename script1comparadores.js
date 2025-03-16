@@ -25,7 +25,9 @@ console.log("es un estudiante (si o no)" + estudante);
 document.write("<div class='rojo'>");
 document.write("El nombre del estudiante es: " + nombre + "<br>");
 document.write("El apellido del estudiante es: " + apellido + "<br>");
-document.write("El Nombre completo del estudiante es: " + (nombre + " " + apellido) + "<br>");
+document.write(
+  "El Nombre completo del estudiante es: " + (nombre + " " + apellido) + "<br>"
+);
 document.write("es un estudiante (si o no)" + estudante + "<br>");
 document.write("<p>");
 document.write("La suma de a y b es: " + suma + "<br>");
@@ -63,28 +65,49 @@ if (a < b) {
 } else {
   console.log("a es mayor que b");
 }
-function calculate() {
-    const aa = parseFloat(document.getElementById('num1').value);
-    const bb = parseFloat(document.getElementById('num2').value);
-    const operaciones = document.getElementById('operation').value;
-    let resultado;
-  
-    switch (operaciones) {
-      case 'add':
-        resultado = aa + bb;
-        break;
-      case 'subtract':
-        resultado = aa - bb;
-        break;
-      case 'multiply':
-        resultado = aa * bb;
-        break;
-      case 'divide':
-        resultado = aa / bb;
-        break;
-      default:
-        resultado = 'Operación no válida';
-    }
-  
-    document.getElementById('result').innerText = 'Resultado: ' + resultado;
+document.getElementById("calcForm").addEventListener("submit", function (event) {
+    event.preventDefault(); // Prevenir el comportamiento predeterminado del formulario
+    calculate(); // Llamar a la función calculate
+});
+
+function validateInputs() {
+  const aa = document.getElementById("num1");
+  const bb = document.getElementById("num2");
+  const calcButton = document.getElementById("calcButton");
+    console.log("num1.value: " + aa.value);
+    console.log("num2.value: " + bb.value);
+  if (aa.value && bb.value) {
+    calcButton.disabled = false;
+  } else {
+    calcButton.disabled = true;
   }
+}
+
+document.getElementById("num1").addEventListener("input", validateInputs);
+document.getElementById("num2").addEventListener("input", validateInputs);
+
+function calculate() {
+  const aa = parseFloat(document.getElementById("num1").value);
+  const bb = parseFloat(document.getElementById("num2").value);
+  const operaciones = document.getElementById("operation").value;
+  let resultado;
+
+  switch (operaciones) {
+    case "add":
+      resultado = aa + bb;
+      break;
+    case "subtract":
+      resultado = aa - bb;
+      break;
+    case "multiply":
+      resultado = aa * bb;
+      break;
+    case "divide":
+      resultado = aa / bb;
+      break;
+    default:
+      resultado = "Operación no válida";
+  }
+
+  document.getElementById("result").innerText = "Resultado: " + resultado;
+}

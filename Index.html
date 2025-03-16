@@ -59,7 +59,7 @@
       <h2>Calculadora</h2>
       <form id="calcForm">
         <label for="num1">Número 1:</label>
-        <input type="number" id="num1"required>
+        <input type="number" id="num1" required>
         <br>
         <label for="num2">Número 2:</label>
         <input type="number" id="num2" required>
@@ -72,12 +72,13 @@
           <option value="divide">Dividir</option>
         </select>
         <br>
-        <button type="button" onclick="calculate()">Calcular</button>
+        <button type="submit" id="calcButton" disabled>Calcular</button>
       </form>
-      <p id="result">Resultado: </p>
+      <label id="result">Resultado: </label>
     </div>
 
     <p>Juana la loca</p>
     <script src="script1comparadores.js"></script>
+    <script src="funcionescallback.js"></script>
   </body>
 </html>

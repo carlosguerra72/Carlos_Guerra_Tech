@@ -28,7 +28,6 @@
         <ul class="menu_list">
           <li class="menu_item">
             <a href="../Index.html" class="menu_link">Home</a>
-
           </li>
 
           <li class="menu_item dropdown">
@@ -64,26 +63,26 @@
           <label for="detal" class="form-label">Detalle:</label>
           <input type="text" id="detal" class="form-input" required />
         </div>
-        <button type="submit" id="addfact" class="form-button" disabled>Agregar</button>
+        <button type="submit" id="addfact" class="form-button" disabled>
+          Agregar
+        </button>
       </form>
     </div>
-  <table>
-    <thead>
-      <tr>
-        <th>Cantidad</th>
-        <th>Valor Unitario</th>
-        <th>Valor Total</th>
-        <th>Impuestos</th>
-      </tr>
-    </thead>
+    <table>
+      <thead>
+        <tr>
+          <th>Cantidad</th>
+          <th>Valor Unitario</th>
+          <th>Impuestos</th>
+          <th>subtotal</th>
+          <th>TOTAL</th>
+        </tr>
+      </thead>
 
-    <tbody>
-      
-    
-    </tbody>
-
-
-  </table>
+      <tbody id="tbody"></tbody>
+    </table>
+    <p id="totalRegistros">Total registros: </p>
+    <p id="prueba"></p>
     <script src="script1fact.js"></script>
   </body>
 </html>

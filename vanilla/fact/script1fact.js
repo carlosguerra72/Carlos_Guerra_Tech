@@ -17,12 +17,7 @@ document.getElementById("cant").addEventListener("input", validateInputs);
 console.log("escuchando los iputs");
 document.getElementById("detal").addEventListener("input", validateInputs);
 document.getElementById("vrunit").addEventListener("input", validateInputs);
-let valor1=100000;
-let valor2=200000;
-document.getElementById("totalRegistros").innerHTML+=`
-<span style='color:green;'>${valor1}</span>
-<span style='color:red;'>${valor2}</span>
-`;
+
 
 
 //Concatenar clasico

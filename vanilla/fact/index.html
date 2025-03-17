@@ -49,7 +49,41 @@
         </ul>
       </div>
     </nav>
+    <div class="form-container">
+      <h2>Su Factura</h2>
+      <form id="FacturaForm" class="form">
+        <div class="form-group">
+          <label for="cant" class="form-label">Cantidad:</label>
+          <input type="number" id="cant" class="form-input" required />
+        </div>
+        <div class="form-group">
+          <label for="vrunit" class="form-label">Valor Unitario:</label>
+          <input type="number" id="vrunit" class="form-input" required />
+        </div>
+        <div class="form-group">
+          <label for="detal" class="form-label">Detalle:</label>
+          <input type="text" id="detal" class="form-input" required />
+        </div>
+        <button type="submit" id="addfact" class="form-button" disabled>Agregar</button>
+      </form>
+    </div>
+  <table>
+    <thead>
+      <tr>
+        <th>Cantidad</th>
+        <th>Valor Unitario</th>
+        <th>Valor Total</th>
+        <th>Impuestos</th>
+      </tr>
+    </thead>
 
-  
+    <tbody>
+      
+    
+    </tbody>
+
+
+  </table>
+    <script src="script1fact.js"></script>
   </body>
 </html>

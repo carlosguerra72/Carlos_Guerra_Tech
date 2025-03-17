@@ -138,4 +138,69 @@ body {
         position: absolute;
     }
 }
+/* estilos de formularios */
 
+/* ...existing code... */
+
+.form-container {
+    background-color: rgb(28, 28, 28);
+    color: white;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10px;
+}
+
+.form-label {
+    margin-bottom: 5px;
+    font-size: 16px;
+}
+
+.form-input {
+    padding: 10px;
+    border-radius: 5px;
+    border: 2px solid transparent;
+    width: 150px;
+}
+
+.form-input:invalid {
+    border-color: red;
+}
+
+.form-input:valid {
+    border-color: rgb(178, 250, 178);
+}
+
+.form-button {
+    background-color: rgb(175, 109, 60);
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 10px;
+}
+
+.form-button:disabled {
+    background-color: grey;
+    cursor: not-allowed;
+    opacity: 0.6;
+}
+
+.form-button:hover:not(:disabled) {
+    background-color: rgb(150, 90, 50);
+}

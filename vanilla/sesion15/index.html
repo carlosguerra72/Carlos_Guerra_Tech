@@ -4,18 +4,18 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Carlos Guerra</title>
-    <link rel="stylesheet" href="style1.css" />
-    
-    <h1 id="tituloarriba">Sprint Uno |Nivel Básico|</h1>
+    <link rel="stylesheet" href="../style1.css" />
+    <link rel="stylesheet" href="../sesion15/style1Lab2.css" />
 
+    <h1 id="tituloarriba">Mi primer Sitio Web</h1>
   </head>
-  <img src="img/fondo1.jpg" class="fondo"/>
+  <img src="../img/fondo1.jpg" class="fondo" />
   <body>
     <nav class="menu">
       <div class="menu_container">
         <figure class="menu_figure">
           <img
-            src="img/cmlogosmall.png"
+            src="../img/cmlogosmall.png"
             width="40%"
             class="menu_logo"
             alt="Aprendiendo a programar"
@@ -34,9 +34,9 @@
           <li class="menu_item dropdown">
             <a href="#" class="menu_link">Deliverables</a>
             <ul class="dropdown_menu">
-              <li><a href="calc/" class="dropdown_link">Calculadora</a></li>
-              <li><a href="fact/" class="dropdown_link">Factura</a></li>
-              <li><a href="sesion15/"class="dropdown_link">Laboratorio2</a></li>
+              <li><a href="../calc/" class="dropdown_link">Calculadora</a></li>
+              <li><a href="../fact/" class="dropdown_link">Factura</a></li>
+              <li><a href="#" class="dropdown_link">Laboratorio2</a></li>
             </ul>
           </li>
 
@@ -49,6 +49,115 @@
         </ul>
       </div>
     </nav>
-    
+    <h1 style="text-align: center">Laboratorio 2</h1>
+    <div class="biografia">
+      <h2 style="text-align:right">Biografía</h2>
+      <p style="text-align: justify">
+        Soy nacido en Valledupar Cesar, viví mi infancia el en municipio de
+        Pueblo Bello - Cesar; donde estudié toda mi primaria y bachillerato,
+        luego en el año 2024, retorne a valledupar donde comenecé a incursionar
+        en el mundo de la tecnología. me formé como tecnico en analisis y
+        programacion de computadores, entre los años 2005 y 2007 donde tambien
+        al tiempo hice mas de una decena de cursos en el sena todos relacionados
+        al ambito tecnologico y ofimatico. inicie mi experiencia laboral sobre
+        el año 2007 incluso fuí tutor en el SENA por unos pocos meses, me
+        dedique a trabajar por varios años admininstrando el sistema de varias
+        instituciones educativas y dedicandome a la contratacion pública. luego
+        trabajé en el sector salud, e incursioné como QA y TI para la creacion
+        de una plataforma que gestionaba caracterizacion de la poblacion
+        indigena. Trabajando en el sector salud, decidí hacerme profesional e
+        ingrese a la UPC, donde me gradué como Contador Público para el año
+        2018, mientras trabajaba para el sector publico y privado en salud y en
+        tecnologia. en el transcurso de ese tiempo recalco que estudie la
+        contaduria publica por que lo vi como una oportunidad de crecimiento,
+        pero tambien porque era necesario saber de contaduria muy bien, para
+        poder hacerle QA a un software contable. y actualmente retorné a
+        pueblo bello donde trabajo desde casa para una empresa multinacional del
+        area tecnologica y de telecomunicaciones donde tengo mas de 3 años de
+        estar trabajando con ellos.
+      </p>
+    </div>
+    <div class="redsocial">
+      <h2 style="text-align:right">Solo una Red Social</h2>
+      <nav>
+        <h4 text-decoration="none">
+        <a href="https://www.linkedin.com/in/carlosguerra72/",>linkedin</a>
+      </h4>
+      </nav>
+    </div>
+    <section>
+      <h2 style="text-align:right">Tablas y Campos que validan</h2>
+      <h4>Aca mostraré una tabla que indexa datos a una factura y va creando una tabla a medida que se agregan los registros y ademas mostraré una calculadora de dos campos que valida antes de mostrar el resultado de la operación.</h4>
+      <div class="calculator">
+        <h2>Calculadora</h2>
+        <form id="calcForm">
+          <label for="num1">Número 1:</label>
+          <input type="number" id="num1" required />
+          <br />
+          <label for="num2">Número 2:</label>
+          <input type="number" id="num2" required />
+          <br />
+          <label for="operation">Operación:</label>
+          <select id="operation">
+            <option value="add">Sumar</option>
+            <option value="subtract">Restar</option>
+            <option value="multiply">Multiplicar</option>
+            <option value="divide">Dividir</option>
+          </select>
+          <br />
+          <button type="submit" id="calcButton" disabled>Calcular</button>
+        </form>
+        <label id="result">Resultado: </label>
+        
+      </div>
+
+      <img src="../img/fondo1.jpg" class="fondo" />
+      <div class="form-container">
+        <h2>Su Factura</h2>
+        <form id="FacturaForm" class="form">
+          <div class="form-group">
+            <label for="cant" class="form-label">Cantidad:</label>
+            <input type="number" id="cant" class="form-input" required />
+          </div>
+          <div class="form-group">
+            <label for="vrunit" class="form-label">Valor Unitario:</label>
+            <input type="number" id="vrunit" class="form-input" required />
+          </div>
+          <div class="form-group">
+            <label for="detal" class="form-label">Detalle:</label>
+            <input type="text" id="detal" class="form-input" required />
+          </div>
+          <button type="submit" id="addfact" class="form-button" disabled>
+            Agregar
+          </button>
+        </form>
+      
+      <table>
+        <thead>
+          <tr>
+            <th>Cantidad</th>
+            <th>Valor Unitario</th>
+            <th>Impuestos</th>
+            <th>subtotal</th>
+            <th>TOTAL</th>
+          </tr>
+        </thead>
+  
+        <tbody id="tbody"></tbody>
+      </table>
+    </div>
+    </section>
+ 
   </body>
+  <script src="../calc/script1calc.js"></script>
+  <script src="../fact/script1fact.js"></script>
+  <footer>
+    
+    <h6 style="text-align: center" >
+      Carlos Miguel Guerra
+      <br />
+      Talento Tech
+      <br />
+      2025
+    </h6>
 </html>

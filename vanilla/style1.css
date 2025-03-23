@@ -138,4 +138,110 @@ body {
         position: absolute;
     }
 }
+/* estilos de formularios */
 
+/* ...existing code... */
+
+.form-container {
+    background-color: rgb(28, 28, 28);
+    color: white;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10px;
+}
+
+.form-label {
+    margin-bottom: 5px;
+    font-size: 16px;
+}
+
+.form-input {
+    padding: 10px;
+    border-radius: 5px;
+    border: 2px solid transparent;
+    width: 150px;
+}
+
+.form-input:invalid {
+    border-color: red;
+}
+
+.form-input:valid {
+    border-color: rgb(178, 250, 178);
+}
+
+.form-button {
+    background-color: rgb(175, 109, 60);
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 10px;
+}
+
+.form-button:disabled {
+    background-color: grey;
+    cursor: not-allowed;
+    opacity: 0.6;
+}
+
+.form-button:hover:not(:disabled) {
+    background-color: rgb(150, 90, 50);
+}
+
+.menu_item {
+    position: relative; /* Necesario para posicionar el menú desplegable */
+}
+
+.dropdown_menu {
+    display: none; /* Ocultar el menú por defecto */
+    position: absolute; /* Posicionarlo relativo al elemento padre */
+    top: 100%; /* Mostrarlo justo debajo del elemento principal */
+    left: 0;
+    background-color: rgb(28, 28, 28);
+    list-style: none;
+    padding: 10px;
+    margin: 0;
+    border-radius: 5px;
+    z-index: 1000; /* Asegurar que esté por encima de otros elementos */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Añadir sombra para mejor visibilidad */
+}
+
+.dropdown_menu li {
+    margin: 5px 0;
+}
+
+.dropdown_link {
+    color: darkgray;
+    text-decoration: none;
+    display: block;
+    padding: 5px 10px;
+    border-radius: 3px;
+}
+
+.dropdown_link:hover {
+    background-color: rgb(150, 90, 50);
+    color: white;
+}
+
+/* Mostrar el menú desplegable cuando el mouse esté sobre el elemento principal o el menú */
+.menu_item.dropdown:hover .dropdown_menu,
+.dropdown_menu:hover {
+    display: block;
+}

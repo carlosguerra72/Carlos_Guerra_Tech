@@ -28,14 +28,13 @@
         <ul class="menu_list">
           <li class="menu_item">
             <a href="../Index.html" class="menu_link">Home</a>
-
           </li>
 
           <li class="menu_item dropdown">
             <a href="#" class="menu_link">Deliverables</a>
             <ul class="dropdown_menu">
-              <li><a href="#" class="dropdown_link">Calculadora</a></li>
-              <li><a href="../fact/" class="dropdown_link">Factura</a></li>
+              <li><a href="../calc/" class="dropdown_link">Calculadora</a></li>
+              <li><a href="#" class="dropdown_link">Factura</a></li>
               <li><a href="../sesion15/"class="dropdown_link">Laboratorio2</a></li>
             </ul>
           </li>
@@ -49,27 +48,41 @@
         </ul>
       </div>
     </nav>
-    <div class="calculator">
-      <h2>Calculadora</h2>
-      <form id="calcForm">
-        <label for="num1">Número 1:</label>
-        <input type="number" id="num1" required />
-        <br />
-        <label for="num2">Número 2:</label>
-        <input type="number" id="num2" required />
-        <br />
-        <label for="operation">Operación:</label>
-        <select id="operation">
-          <option value="add">Sumar</option>
-          <option value="subtract">Restar</option>
-          <option value="multiply">Multiplicar</option>
-          <option value="divide">Dividir</option>
-        </select>
-        <br />
-        <button type="submit" id="calcButton" disabled>Calcular</button>
+    <div class="form-container">
+      <h2>Su Factura</h2>
+      <form id="FacturaForm" class="form">
+        <div class="form-group">
+          <label for="cant" class="form-label">Cantidad:</label>
+          <input type="number" id="cant" class="form-input" required />
+        </div>
+        <div class="form-group">
+          <label for="vrunit" class="form-label">Valor Unitario:</label>
+          <input type="number" id="vrunit" class="form-input" required />
+        </div>
+        <div class="form-group">
+          <label for="detal" class="form-label">Detalle:</label>
+          <input type="text" id="detal" class="form-input" required />
+        </div>
+        <button type="submit" id="addfact" class="form-button" disabled>
+          Agregar
+        </button>
       </form>
-      <label id="result">Resultado: </label>
     </div>
-    <script src="script1calc.js"></script>
+    <table>
+      <thead>
+        <tr>
+          <th>Cantidad</th>
+          <th>Valor Unitario</th>
+          <th>Impuestos</th>
+          <th>subtotal</th>
+          <th>TOTAL</th>
+        </tr>
+      </thead>
+
+      <tbody id="tbody"></tbody>
+    </table>
+    
+
+    <script src="script1fact.js"></script>
   </body>
 </html>
